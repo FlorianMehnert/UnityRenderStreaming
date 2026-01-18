@@ -21,11 +21,12 @@ namespace Unity.RenderStreaming.Editor
             BuildTarget.Android
         };
 
-#if UNITY_2021_1_OR_NEWER
+#if UNITY_6000_0_OR_NEWER
+        const AndroidSdkVersions RequiredAndroidSdkVersion = AndroidSdkVersions.AndroidApiLevel23;
+#elif UNITY_2021_1_OR_NEWER
         const AndroidSdkVersions RequiredAndroidSdkVersion = AndroidSdkVersions.AndroidApiLevel22;
 #else
         const AndroidSdkVersions RequiredAndroidSdkVersion = AndroidSdkVersions.AndroidApiLevel21;
-#endif
 
         private struct ConfigStyle
         {
