@@ -27,6 +27,7 @@ namespace Unity.RenderStreaming.Editor
         const AndroidSdkVersions RequiredAndroidSdkVersion = AndroidSdkVersions.AndroidApiLevel22;
 #else
         const AndroidSdkVersions RequiredAndroidSdkVersion = AndroidSdkVersions.AndroidApiLevel21;
+#endif
 
         private struct ConfigStyle
         {
