@@ -11,7 +11,7 @@ namespace Unity.RenderStreaming.Samples
     {
         [Header("References")]
         public Camera targetCamera; // if null, uses Camera.main
-        public RenderTexture renderTexture;
+        public Texture renderTexture;
 
         [Header("World-space placement (meters)")]
         [Tooltip("Position in camera local-space (meters). Negative X = left, negative Y = down.")]

@@ -12,16 +12,8 @@ namespace Unity.RenderStreaming.Samples
         [SerializeField] private SingleConnection connection;
 #pragma warning restore 0649
 
-        [SerializeField] InputActionReference connectAction;
-
         bool isConnected;
         private string connectionId;
-        private InputSender inputSender;
-
-        void Awake()
-        {
-            inputSender = GetComponent<InputSender>();
-        }
 
         void Start()
         {
@@ -29,24 +21,6 @@ namespace Unity.RenderStreaming.Samples
                 return;
 
             renderStreaming.Run();
-        }
-
-
-        void OnEnable()
-        {
-            if (connectAction != null && connectAction.action != null)
-            {
-                connectAction.action.Enable();
-                connectAction.action.performed += OnConnectPressed;
-            }
-        }
-
-        void OnDisable()
-        {
-            if (connectAction != null && connectAction.action != null)
-            {
-                connectAction.action.performed -= OnConnectPressed;
-            }
         }
 
 
@@ -80,11 +54,6 @@ namespace Unity.RenderStreaming.Samples
             if (Keyboard.current.kKey.wasPressedThisFrame)
             {
                 ToggleConnection();
-            }
-
-            if (isConnected)
-            {
-                //RunHeightMap();
             }
         }
     }
