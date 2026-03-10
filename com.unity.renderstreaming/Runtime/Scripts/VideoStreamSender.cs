@@ -159,7 +159,7 @@ namespace Unity.RenderStreaming
         [SerializeField, FrameRate]
         private float m_FrameRate = s_defaultFrameRate;
 
-        [SerializeField, Bitrate(0, 10000)]
+        [SerializeField, Bitrate(0, 100000)]
         private Range m_Bitrate = new Range(s_defaultMinBitrate, s_defaultMaxBitrate);
 
         [SerializeField, ScaleResolution]
